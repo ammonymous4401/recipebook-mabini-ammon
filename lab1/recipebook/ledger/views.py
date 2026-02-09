@@ -73,12 +73,14 @@ recipes = [
 def recipe_list(request):
     ctx = {
         "recipes": recipes,
-    }   
+    }
     return render(request, 'ledger/recipe_list.html', ctx)
 
 
 def recipe_detail(request, recipe_id):
-    recipe = next((item for item in recipes 
-                   if item["link"] == f"/recipe/{recipe_id}"), None)
-    
+    recipe = next(
+        (item for item in recipes if item["link"] == f"/recipe/{recipe_id}"),
+        None,
+    )
+
     return render(request, 'ledger/recipe_detail.html', {"recipe": recipe})

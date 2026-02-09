@@ -18,7 +18,7 @@ from django.contrib import admin
 from django.urls import include, path
 
 urlpatterns = [
-    path('recipes/', include('ledger.urls'), name ='ledger'),
-    path('recipe/', include('ledger.urls'), name ='recipe'),
+    path('recipes/', include('ledger.urls'), name='ledger'),
+    path('recipe/', include('ledger.urls'), name='recipe'),
     path('admin/', admin.site.urls),
 ]
